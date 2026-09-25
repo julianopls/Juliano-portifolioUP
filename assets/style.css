@@ -1,0 +1,145 @@
+:root{
+  --cor: #9b5cff;
+  --cor-clara: #c59bff;
+  --fundo: #0c0b10;
+  --fundo-2: #15131c;
+  --card: #191721;
+  --texto: #f7f4ff;
+  --texto-2: #aaa5b5;
+  --borda: rgba(255,255,255,.08);
+  --max: 1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--fundo);color:var(--texto);line-height:1.6}
+a{text-decoration:none;color:inherit}
+button,input,textarea{font:inherit}
+button{border:0;cursor:pointer}
+.container{width:min(92%,var(--max));margin:auto}
+.section{padding:100px 0}
+.header{position:fixed;top:0;left:0;width:100%;z-index:100;background:rgba(12,11,16,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--borda)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:1.4rem;font-weight:800}
+.logo span,.section-heading span,.about-content span,.hero h1 span,.hero h2 span{color:var(--cor)}
+.nav-list{display:flex;align-items:center;gap:30px;list-style:none}
+.nav-link{color:var(--texto-2);font-size:.95rem;transition:.3s}
+.nav-link:hover,.nav-link.active{color:var(--texto)}
+.nav-contact{padding:10px 18px;border:1px solid var(--cor);border-radius:30px;color:var(--texto)}
+.nav-toggle,.nav-close{display:none;background:none;color:var(--texto);font-size:1.5rem}
+.hero{padding-top:150px;min-height:100vh;display:grid;align-items:center}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.eyebrow,.section-tag,.project-type{color:var(--cor-clara);font-size:.75rem;font-weight:700;letter-spacing:2px}
+.hero h1{font-size:clamp(3rem,8vw,6rem);line-height:1.05;margin:12px 0}
+.hero h2{font-size:clamp(1.3rem,3vw,2rem);font-weight:500;margin-bottom:20px}
+.hero-text,.about-content p,.service-card p,.project-card p,.contact-content>p{color:var(--texto-2);max-width:580px}
+.hero-buttons{display:flex;gap:14px;margin:30px 0}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--cor);color:white;padding:13px 20px;border-radius:8px;font-weight:700;transition:.3s}
+.button:hover{transform:translateY(-3px);filter:brightness(1.1)}
+.button-outline{background:transparent;border:1px solid var(--borda)}
+.social{display:flex;gap:15px}
+.social a{width:40px;height:40px;border:1px solid var(--borda);display:grid;place-items:center;border-radius:50%;color:var(--texto-2);transition:.3s}
+.social a:hover{color:var(--cor);border-color:var(--cor)}
+.hero-image{display:grid;place-items:center}
+.profile-card{width:min(360px,90vw);aspect-ratio:1/1.08;background:linear-gradient(145deg,#211b2d,#111016);border:1px solid var(--borda);border-radius:35px;display:grid;place-items:center;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.profile-circle{width:210px;height:210px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#c59bff,#6f32cc 55%,#21152d);box-shadow:0 0 80px rgba(155,92,255,.25)}
+.profile-circle span{font-size:4rem;font-weight:800;color:white}
+.code-box{position:absolute;bottom:30px;right:25px;background:#0d0c11;border:1px solid var(--borda);padding:12px 18px;border-radius:8px;color:var(--cor-clara);font-family:monospace}
+.about-grid,.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about-image{min-height:380px;display:grid;place-items:center}
+.about-shape{width:270px;height:270px;border-radius:30px 80px 30px 80px;background:linear-gradient(135deg,#271d36,#121016);border:1px solid var(--borda);display:grid;place-items:center;transform:rotate(-7deg)}
+.about-shape i{font-size:7rem;color:var(--cor)}
+.about-content h2,.section-heading h2,.contact-content h2{font-size:clamp(2rem,5vw,3.4rem);line-height:1.15;margin:12px 0 22px}
+.about-content p{margin-bottom:15px}
+.text-link{display:inline-flex;gap:8px;color:var(--cor-clara);font-weight:700;margin-top:15px}
+.section-heading{max-width:720px;margin-bottom:45px}
+.project-slider,.testimonial-slider{overflow:hidden}
+.project-card{background:var(--card);border:1px solid var(--borda);border-radius:20px;padding:28px;min-height:310px;display:flex!important;flex-direction:column;justify-content:space-between}
+.project-icon{width:55px;height:55px;border-radius:14px;background:rgba(155,92,255,.12);color:var(--cor);display:grid;place-items:center;font-size:1.7rem;margin-bottom:25px}
+.project-card h3{font-size:1.6rem;margin:8px 0}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.tags span{font-size:.75rem;padding:5px 9px;border:1px solid var(--borda);border-radius:20px;color:var(--texto-2)}
+.project-link{align-self:flex-end;width:42px;height:42px;border:1px solid var(--borda);border-radius:50%;display:grid;place-items:center;color:var(--cor)}
+.swiper-pagination{position:relative!important;margin-top:25px}
+.swiper-pagination-bullet{background:#777;opacity:1}
+.swiper-pagination-bullet-active{background:var(--cor)}
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.service-card{padding:28px;background:var(--card);border:1px solid var(--borda);border-radius:18px;transition:.3s}
+.service-card:hover{transform:translateY(-7px);border-color:rgba(155,92,255,.5)}
+.service-card i{font-size:2rem;color:var(--cor);display:block;margin-bottom:20px}
+.service-card h3{margin-bottom:8px}
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px 50px}
+.skill>div:first-child{display:flex;justify-content:space-between;margin-bottom:8px}
+.skill b{color:var(--texto-2);font-size:.8rem}
+.bar{height:7px;background:#211f27;border-radius:20px;overflow:hidden}
+.bar span{display:block;height:100%;background:var(--cor);border-radius:20px}
+.testimonial{background:var(--card);border:1px solid var(--borda);border-radius:20px;padding:35px;text-align:center}
+.testimonial>i{font-size:2.5rem;color:var(--cor)}
+.testimonial p{font-size:1.1rem;color:var(--texto-2);max-width:650px;margin:15px auto}
+.testimonial span{color:var(--texto-2);font-size:.85rem}
+.contact-info{display:grid;gap:14px;margin-top:25px}
+.contact-info a{color:var(--texto-2);display:flex;gap:10px;align-items:center}
+.contact-info i{color:var(--cor);font-size:1.2rem}
+.contact-form{background:var(--card);padding:28px;border:1px solid var(--borda);border-radius:20px;display:grid;gap:14px}
+.contact-form input,.contact-form textarea{width:100%;background:#100f14;border:1px solid var(--borda);border-radius:8px;padding:13px;color:white;outline:none;resize:vertical}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--cor)}
+.form-message{font-size:.85rem;color:var(--cor-clara);min-height:20px}
+.footer{border-top:1px solid var(--borda);padding:25px 0}
+.footer-content{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.footer p{color:var(--texto-2);font-size:.85rem}
+.top{width:40px;height:40px;border:1px solid var(--borda);border-radius:50%;display:grid;place-items:center;color:var(--cor)}
+@media(max-width:850px){
+  .nav-menu{position:fixed;top:0;right:-100%;width:75%;height:100vh;background:var(--fundo-2);padding:100px 30px;transition:.35s}
+  .nav-menu.show{right:0}
+  .nav-list{flex-direction:column;align-items:flex-start}
+  .nav-toggle,.nav-close{display:block}
+  .nav-close{position:absolute;top:22px;right:22px}
+  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .hero{padding-top:120px}
+  .hero-image{order:-1}
+  .profile-card{width:260px}
+  .profile-circle{width:150px;height:150px}
+  .profile-circle span{font-size:2.8rem}
+  .about-image{min-height:280px}
+  .services-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .section{padding:75px 0}
+  .hero h1{font-size:3.5rem}
+  .hero-buttons{flex-direction:column}
+  .button{width:100%}
+  .services-grid,.skills-grid{grid-template-columns:1fr}
+  .footer-content{flex-direction:column;text-align:center}
+}
+
+.profile-photo{
+  width:100%;
+  height:100%;
+  max-height:100%;
+  object-fit:cover;
+  object-position:center 28%;
+  border-radius:35px;
+}
+.profile-card{
+  overflow:hidden;
+}
+.profile-card .code-box{
+  z-index:2;
+}
+
+.whatsapp-button{
+  display:flex!important;
+  align-items:center;
+  gap:10px;
+  width:max-content;
+  max-width:100%;
+  padding:12px 16px;
+  border:1px solid #25d366;
+  border-radius:8px;
+  color:#25d366!important;
+  font-weight:700;
+  transition:.3s;
+}
+.whatsapp-button:hover{
+  background:rgba(37,211,102,.1);
+  transform:translateY(-2px);
+}
